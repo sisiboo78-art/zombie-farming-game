@@ -1438,3 +1438,4 @@ layer_2/tile_data = PackedInt32Array(524304, 524288, 16, 393232, 458752, 16, 327
 format = 2
 
 [node name="Node2D" parent="." unique_id=2068417779 instance=ExtResource("2_fj7yv")]
+position = Vector2(12, 11)

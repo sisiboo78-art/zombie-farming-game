@@ -136,3 +136,7 @@ animation = &"idle"
 visible = false
 position = Vector2(148.5, 74)
 shape = SubResource("RectangleShape2D_5tggg")
+
+[node name="Camera2D" type="Camera2D" parent="player" unique_id=1645736185]
+position = Vector2(148, 79)
+position_smoothing_enabled = true

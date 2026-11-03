@@ -4,6 +4,9 @@
 [ext_resource type="Texture2D" uid="uid://71k8m733g06f" path="res://Zombie farmsim/Free - Pixel Art Character 1/Walking/Orange_Head_Walking-Sheet.png" id="2_puw8p"]
 [ext_resource type="Texture2D" uid="uid://dn6y7qapr3ww3" path="res://Zombie farmsim/Free - Pixel Art Character 1/Idle/Orange_Head_Idle-Sheet.png" id="3_mot72"]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5tggg"]
+size = Vector2(13, 29)
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_5imwo"]
 atlas = ExtResource("2_puw8p")
 region = Rect2(0, 32, 32, 32)
@@ -118,13 +121,22 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_5tggg"]
-size = Vector2(21, 30)
+[sub_resource type="Animation" id="Animation_7bbpa"]
+resource_name = "idle_down"
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_puw8p"]
+_data = {
+&"idle_down": SubResource("Animation_7bbpa")
+}
 
 [node name="Node2D" type="Node2D" unique_id=2068417779]
 
 [node name="player" type="CharacterBody2D" parent="." unique_id=1961071263]
 script = ExtResource("1_7bbpa")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="player" unique_id=2084300394]
+position = Vector2(148.5, 74.5)
+shape = SubResource("RectangleShape2D_5tggg")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="player" unique_id=251849430]
 texture_filter = 1
@@ -132,11 +144,9 @@ position = Vector2(149, 74)
 sprite_frames = SubResource("SpriteFrames_samgm")
 animation = &"idle"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="player" unique_id=2084300394]
-visible = false
-position = Vector2(148.5, 74)
-shape = SubResource("RectangleShape2D_5tggg")
-
 [node name="Camera2D" type="Camera2D" parent="player" unique_id=1645736185]
 position = Vector2(148, 79)
 position_smoothing_enabled = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="player" unique_id=1823807672]
+libraries/ = SubResource("AnimationLibrary_puw8p")

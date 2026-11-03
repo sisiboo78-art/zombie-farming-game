@@ -1,0 +1,33 @@
+[gd_scene format=3 uid="uid://l0ga6lehbod"]
+
+[ext_resource type="Script" uid="uid://b2400m1ov3uc7" path="res://inventory/item_slot.gd" id="1_8kgv2"]
+
+[node name="ItemSlot" type="Node2D" unique_id=1108764584]
+script = ExtResource("1_8kgv2")
+
+[node name="Slot" type="ColorRect" parent="." unique_id=341279902]
+offset_left = -21.0
+offset_top = -21.0
+offset_right = 19.0
+offset_bottom = 19.0
+
+[node name="Item_Icon" type="Sprite2D" parent="." unique_id=1660889858]
+position = Vector2(20, 20.250002)
+scale = Vector2(0.31249997, 0.31640625)
+
+[node name="Button" type="Button" parent="." unique_id=783001924]
+self_modulate = Color(1, 1, 1, 0)
+offset_left = -21.0
+offset_top = -21.0
+offset_right = 19.0
+offset_bottom = 19.0
+
+[node name="item_count_label" type="Label" parent="Button" unique_id=9704885]
+self_modulate = Color(0, 0, 0, 1)
+layout_mode = 0
+offset_left = 19.0
+offset_top = 21.0
+offset_right = 41.0
+offset_bottom = 44.0
+text = "0"
+horizontal_alignment = 2

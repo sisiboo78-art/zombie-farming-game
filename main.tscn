@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://d1xxw4h8fl113"]
 
-[ext_resource type="Script" uid="uid://bsxnk62a7mgsc" path="res://inventory.gd" id="1_ig7tw"]
+[ext_resource type="Script" uid="uid://bsxnk62a7mgsc" path="res://inventory/inventory.gd" id="1_ig7tw"]
 
 [node name="main" type="Node2D" unique_id=910631222]
 

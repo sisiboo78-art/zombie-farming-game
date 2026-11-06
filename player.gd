@@ -1,7 +1,7 @@
 extends CharacterBody2D
 
-const max_speed = 100
-const accel = 1500
+const max_speed = 100 #speed you go
+const accel = 1500 #speed you stop at
 
 func _physics_process(delta):
 	# Update velocity towards the desired direction based on input

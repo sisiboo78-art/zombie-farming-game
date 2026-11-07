@@ -1,9 +1,27 @@
 [gd_scene format=3 uid="uid://xirbdh85s0om"]
 
 [ext_resource type="Script" uid="uid://cy2psodjb1c6y" path="res://main_menu.gd" id="1_06t4h"]
+[ext_resource type="Texture2D" uid="uid://ckar86jjadix8" path="res://zombie-world-backgrounds-free/1280x640/abandoned_supermarket_alt.png" id="2_glbon"]
+[ext_resource type="Texture2D" uid="uid://drm27n4fpwiaj" path="res://Zombie farmsim/quit unclicked.png" id="2_jix8l"]
+[ext_resource type="Texture2D" uid="uid://drgv7espaopxb" path="res://Zombie farmsim/quit press.png" id="3_glbon"]
+[ext_resource type="Texture2D" uid="uid://dp08y2sgxj1yy" path="res://Zombie farmsim/quit hover.png" id="4_nlkkf"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_06t4h"]
+load_path = "res://.godot/imported/Game start unclicked.png-805765a67260aa839f395afafcb685f5.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_7vrkn"]
+load_path = "res://.godot/imported/Game start clicked.png-2f8670d4139d2d6eee1624193a1e6a78.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_fu7sn"]
+load_path = "res://.godot/imported/Game start hover.png-83f73fc70d4e6c7795189e4926e27727.ctex"
 
 [node name="Main menu" type="Node2D" unique_id=1869022502]
 script = ExtResource("1_06t4h")
+
+[node name="background" type="Sprite2D" parent="." unique_id=1018141970]
+position = Vector2(160.00002, 89)
+scale = Vector2(0.25429687, 0.28671873)
+texture = ExtResource("2_glbon")
 
 [node name="Button_manager" type="Control" parent="." unique_id=412429476]
 layout_mode = 3
@@ -11,29 +29,32 @@ anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="Start" type="Button" parent="Button_manager" unique_id=1359612479]
+[node name="Start" type="TextureButton" parent="Button_manager" unique_id=1540599532]
 layout_mode = 0
-offset_left = 6.0
-offset_top = 14.0
-offset_right = 102.0
-offset_bottom = 45.0
-text = "Start Game"
+offset_left = 190.0
+offset_top = 17.0
+offset_right = 323.0
+offset_bottom = 80.0
+texture_normal = SubResource("CompressedTexture2D_06t4h")
+texture_pressed = SubResource("CompressedTexture2D_7vrkn")
+texture_hover = SubResource("CompressedTexture2D_fu7sn")
 
-[node name="Options" type="Button" parent="Button_manager" unique_id=134643711]
+[node name="Options" type="Button" parent="Button_manager" unique_id=369906644]
 layout_mode = 0
-offset_left = 6.0
-offset_top = 47.0
-offset_right = 73.0
-offset_bottom = 78.0
-text = "options"
+offset_left = 225.0
+offset_top = 88.0
+offset_right = 292.0
+offset_bottom = 119.0
 
-[node name="Quit" type="Button" parent="Button_manager" unique_id=1232432109]
+[node name="Quit" type="TextureButton" parent="Button_manager" unique_id=393826133]
 layout_mode = 0
-offset_left = 7.0
-offset_top = 80.0
-offset_right = 49.0
-offset_bottom = 111.0
-text = "Quit"
+offset_left = 198.0
+offset_top = 108.0
+offset_right = 333.0
+offset_bottom = 183.0
+texture_normal = ExtResource("2_jix8l")
+texture_pressed = ExtResource("3_glbon")
+texture_hover = ExtResource("4_nlkkf")
 
 [connection signal="pressed" from="Button_manager/Start" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="Button_manager/Options" to="." method="_on_options_pressed"]

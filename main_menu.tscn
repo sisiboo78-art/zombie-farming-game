@@ -1,0 +1,40 @@
+[gd_scene format=3 uid="uid://xirbdh85s0om"]
+
+[ext_resource type="Script" uid="uid://cy2psodjb1c6y" path="res://main_menu.gd" id="1_06t4h"]
+
+[node name="Main menu" type="Node2D" unique_id=1869022502]
+script = ExtResource("1_06t4h")
+
+[node name="Button_manager" type="Control" parent="." unique_id=412429476]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Start" type="Button" parent="Button_manager" unique_id=1359612479]
+layout_mode = 0
+offset_left = 6.0
+offset_top = 14.0
+offset_right = 102.0
+offset_bottom = 45.0
+text = "Start Game"
+
+[node name="Options" type="Button" parent="Button_manager" unique_id=134643711]
+layout_mode = 0
+offset_left = 6.0
+offset_top = 47.0
+offset_right = 73.0
+offset_bottom = 78.0
+text = "options"
+
+[node name="Quit" type="Button" parent="Button_manager" unique_id=1232432109]
+layout_mode = 0
+offset_left = 7.0
+offset_top = 80.0
+offset_right = 49.0
+offset_bottom = 111.0
+text = "Quit"
+
+[connection signal="pressed" from="Button_manager/Start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="Button_manager/Options" to="." method="_on_options_pressed"]
+[connection signal="pressed" from="Button_manager/Quit" to="." method="_on_quit_pressed"]

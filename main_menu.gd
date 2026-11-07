@@ -3,8 +3,7 @@ extends Node2D
 var button_type = null
 
 func _on_start_pressed() -> void:
-	if button_type == "Start" : 
-		get_tree().change_scene_to_file("res://main.tscn")
+	get_tree().change_scene_to_file("res://world.tscn")
 
 
 #func _on_options_pressed() -> void:

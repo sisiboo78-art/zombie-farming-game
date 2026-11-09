@@ -1,6 +1,6 @@
 class_name Player extends CharacterBody2D
 
-var cardinal_direction : Vector2 = Vector.DOWN 
+#var cardinal_direction : Vector2 = Vector.DOWN 
 var direction : Vector2 = Vector2.ZERO
 const max_speed = 100 #speed you go
 const accel = 1500 #speed you stop at

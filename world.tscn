@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://ckqnkpnic7omr"]
 
-[ext_resource type="Texture2D" uid="uid://dqg75o7s2x3ws" path="res://Zombie farmsim/free_sample_tileset.png" id="1_f3sb7"]
+[ext_resource type="Texture2D" uid="uid://s5r76r4ae881" path="res://Zombie farmsim/free_sample_tileset.png" id="1_f3sb7"]
 [ext_resource type="PackedScene" uid="uid://cxkmkxoanjr5a" path="res://ZFSgame.tscn" id="2_fj7yv"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_fj7yv"]

@@ -1,0 +1,104 @@
+[gd_scene format=3 uid="uid://cxkmkxoanjr5a"]
+
+[ext_resource type="Script" uid="uid://wwtuc6c11syd" path="res://player.gd" id="1_7bbpa"]
+[ext_resource type="Texture2D" uid="uid://dohgkv0onhrws" path="res://Zombie farmsim/Free - Pixel Art Character 1/Idle/Orange_Head_Idle-Sheet.png" id="3_mot72"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5tggg"]
+size = Vector2(13, 29)
+
+[sub_resource type="Animation" id="Animation_ulgnk"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_7bbpa"]
+resource_name = "idle_down"
+length = 1.2666667
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3, 0.56666666, 0.9, 1.1666666),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [5, 6, 7, 8, 9]
+}
+
+[sub_resource type="Animation" id="Animation_puw8p"]
+resource_name = "idle_side"
+length = 1.2
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.26666668, 0.53333336, 0.8, 1.0666667),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [10, 11, 12, 13, 14]
+}
+
+[sub_resource type="Animation" id="Animation_mot72"]
+resource_name = "idle_up"
+length = 1.3666667
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.33333334, 0.6333333, 0.93333334, 1.2333333),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_puw8p"]
+_data = {
+&"RESET": SubResource("Animation_ulgnk"),
+&"idle_down": SubResource("Animation_7bbpa"),
+&"idle_side": SubResource("Animation_puw8p"),
+&"idle_up": SubResource("Animation_mot72")
+}
+
+[node name="Node2D" type="Node2D" unique_id=2068417779]
+
+[node name="player" type="CharacterBody2D" parent="." unique_id=1961071263]
+script = ExtResource("1_7bbpa")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="player" unique_id=2084300394]
+position = Vector2(148.5, 74.5)
+shape = SubResource("RectangleShape2D_5tggg")
+
+[node name="Sprite2D" type="Sprite2D" parent="player" unique_id=1381386411]
+texture_filter = 1
+position = Vector2(149, 74)
+texture = ExtResource("3_mot72")
+hframes = 5
+vframes = 4
+
+[node name="Camera2D" type="Camera2D" parent="player" unique_id=1645736185]
+position = Vector2(148, 79)
+position_smoothing_enabled = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="player" unique_id=1823807672]
+libraries/ = SubResource("AnimationLibrary_puw8p")

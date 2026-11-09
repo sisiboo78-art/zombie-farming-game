@@ -1,132 +1,83 @@
 [gd_scene format=3 uid="uid://cxkmkxoanjr5a"]
 
 [ext_resource type="Script" uid="uid://wwtuc6c11syd" path="res://player.gd" id="1_7bbpa"]
-[ext_resource type="Texture2D" uid="uid://71k8m733g06f" path="res://Zombie farmsim/Free - Pixel Art Character 1/Walking/Orange_Head_Walking-Sheet.png" id="2_puw8p"]
-[ext_resource type="Texture2D" uid="uid://dn6y7qapr3ww3" path="res://Zombie farmsim/Free - Pixel Art Character 1/Idle/Orange_Head_Idle-Sheet.png" id="3_mot72"]
+[ext_resource type="Texture2D" uid="uid://dohgkv0onhrws" path="res://Zombie farmsim/Free - Pixel Art Character 1/Idle/Orange_Head_Idle-Sheet.png" id="3_mot72"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5tggg"]
 size = Vector2(13, 29)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_5imwo"]
-atlas = ExtResource("2_puw8p")
-region = Rect2(0, 32, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_fg1c8"]
-atlas = ExtResource("2_puw8p")
-region = Rect2(32, 32, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_75pps"]
-atlas = ExtResource("2_puw8p")
-region = Rect2(64, 32, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_r8tyl"]
-atlas = ExtResource("2_puw8p")
-region = Rect2(96, 32, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_lsnv1"]
-atlas = ExtResource("3_mot72")
-region = Rect2(128, 32, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_ftpog"]
-atlas = ExtResource("2_puw8p")
-region = Rect2(0, 96, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_h03fv"]
-atlas = ExtResource("2_puw8p")
-region = Rect2(32, 96, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_okba5"]
-atlas = ExtResource("2_puw8p")
-region = Rect2(64, 96, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_imbf7"]
-atlas = ExtResource("2_puw8p")
-region = Rect2(96, 96, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_n1tbt"]
-atlas = ExtResource("2_puw8p")
-region = Rect2(0, 0, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_clig1"]
-atlas = ExtResource("2_puw8p")
-region = Rect2(32, 0, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_8nd8m"]
-atlas = ExtResource("2_puw8p")
-region = Rect2(64, 0, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_ybcs6"]
-atlas = ExtResource("2_puw8p")
-region = Rect2(96, 0, 32, 32)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_samgm"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_5imwo")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_fg1c8")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_75pps")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_r8tyl")
-}],
-"loop": 1,
-"name": &"downwalk",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_lsnv1")
-}],
-"loop": 1,
-"name": &"idle",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_ftpog")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_h03fv")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_okba5")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_imbf7")
-}],
-"loop": 1,
-"name": &"sidewalk",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_n1tbt")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_clig1")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_8nd8m")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_ybcs6")
-}],
-"loop": 1,
-"name": &"upwalk",
-"speed": 5.0
-}]
+[sub_resource type="Animation" id="Animation_ulgnk"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
 
 [sub_resource type="Animation" id="Animation_7bbpa"]
 resource_name = "idle_down"
+length = 1.2666667
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3, 0.56666666, 0.9, 1.1666666),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [5, 6, 7, 8, 9]
+}
+
+[sub_resource type="Animation" id="Animation_puw8p"]
+resource_name = "idle_side"
+length = 1.2
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.26666668, 0.53333336, 0.8, 1.0666667),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [10, 11, 12, 13, 14]
+}
+
+[sub_resource type="Animation" id="Animation_mot72"]
+resource_name = "idle_up"
+length = 1.3666667
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.33333334, 0.6333333, 0.93333334, 1.2333333),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_puw8p"]
 _data = {
-&"idle_down": SubResource("Animation_7bbpa")
+&"RESET": SubResource("Animation_ulgnk"),
+&"idle_down": SubResource("Animation_7bbpa"),
+&"idle_side": SubResource("Animation_puw8p"),
+&"idle_up": SubResource("Animation_mot72")
 }
 
 [node name="Node2D" type="Node2D" unique_id=2068417779]
@@ -138,11 +89,12 @@ script = ExtResource("1_7bbpa")
 position = Vector2(148.5, 74.5)
 shape = SubResource("RectangleShape2D_5tggg")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="player" unique_id=251849430]
+[node name="Sprite2D" type="Sprite2D" parent="player" unique_id=1381386411]
 texture_filter = 1
 position = Vector2(149, 74)
-sprite_frames = SubResource("SpriteFrames_samgm")
-animation = &"idle"
+texture = ExtResource("3_mot72")
+hframes = 5
+vframes = 4
 
 [node name="Camera2D" type="Camera2D" parent="player" unique_id=1645736185]
 position = Vector2(148, 79)

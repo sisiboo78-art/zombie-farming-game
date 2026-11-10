@@ -19,8 +19,8 @@ load_path = "res://.godot/imported/Game start hover.png-83f73fc70d4e6c7795189e49
 script = ExtResource("1_06t4h")
 
 [node name="background" type="Sprite2D" parent="." unique_id=1018141970]
-position = Vector2(160.00002, 89)
-scale = Vector2(0.25429687, 0.28671873)
+position = Vector2(160, 90)
+scale = Vector2(0.25156254, 0.284375)
 texture = ExtResource("2_glbon")
 
 [node name="Button_manager" type="Control" parent="." unique_id=412429476]

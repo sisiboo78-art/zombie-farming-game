@@ -31,27 +31,27 @@ offset_bottom = 40.0
 
 [node name="Start" type="TextureButton" parent="Button_manager" unique_id=1540599532]
 layout_mode = 0
-offset_left = 190.0
-offset_top = 17.0
-offset_right = 323.0
-offset_bottom = 80.0
+offset_left = 187.0
+offset_top = 2.0
+offset_right = 320.0
+offset_bottom = 65.0
 texture_normal = SubResource("CompressedTexture2D_06t4h")
 texture_pressed = SubResource("CompressedTexture2D_7vrkn")
 texture_hover = SubResource("CompressedTexture2D_fu7sn")
 
 [node name="Options" type="Button" parent="Button_manager" unique_id=369906644]
 layout_mode = 0
-offset_left = 225.0
-offset_top = 88.0
-offset_right = 292.0
-offset_bottom = 119.0
+offset_left = 218.0
+offset_top = 67.0
+offset_right = 285.0
+offset_bottom = 98.0
 
 [node name="Quit" type="TextureButton" parent="Button_manager" unique_id=393826133]
 layout_mode = 0
-offset_left = 198.0
-offset_top = 108.0
-offset_right = 333.0
-offset_bottom = 183.0
+offset_left = 190.0
+offset_top = 87.0
+offset_right = 325.0
+offset_bottom = 162.0
 texture_normal = ExtResource("2_jix8l")
 texture_pressed = ExtResource("3_glbon")
 texture_hover = ExtResource("4_nlkkf")

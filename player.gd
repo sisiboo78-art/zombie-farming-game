@@ -22,18 +22,13 @@ func _physics_process(delta):
 	pass
 
 
-
-
 func SetDirection() -> bool:
 	
 	return true
 
-
-
 func SetState() -> bool: 
 	
 	return true
-
 
 func UpdateAnimation() -> void: 
 	animation_player.play("idle_down")

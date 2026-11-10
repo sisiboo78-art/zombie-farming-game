@@ -1,8 +1,12 @@
 [gd_scene format=3 uid="uid://dgmquyg2v8krj"]
 
 [ext_resource type="Script" uid="uid://lbk66xh40yp1" path="res://pause_menu.gd" id="1_hdmo1"]
+[ext_resource type="Texture2D" uid="uid://brgfjlor4gxg8" path="res://Zombie farmsim/Game start unclicked.png" id="2_2nc7s"]
+[ext_resource type="Texture2D" uid="uid://d22x537xgui2g" path="res://Zombie farmsim/Game start clicked.png" id="2_nwcfo"]
+[ext_resource type="Texture2D" uid="uid://drm27n4fpwiaj" path="res://Zombie farmsim/quit unclicked.png" id="4_d3xb4"]
+[ext_resource type="Texture2D" uid="uid://drgv7espaopxb" path="res://Zombie farmsim/quit press.png" id="5_2nc7s"]
 
-[node name="PauseMenu" type="CanvasLayer" unique_id=295281853]
+[node name="PauseMenu" type="Node2D" unique_id=983435638]
 process_mode = 3
 script = ExtResource("1_hdmo1")
 
@@ -11,9 +15,21 @@ offset_right = 324.0
 offset_bottom = 183.0
 color = Color(0, 0, 0, 0.60784316)
 
-[node name="Button" type="Button" parent="." unique_id=1212898463]
-offset_right = 8.0
-offset_bottom = 8.0
-text = "resume"
+[node name="resume" type="TextureButton" parent="." unique_id=2081976233]
+offset_left = 102.0
+offset_top = 19.0
+offset_right = 235.0
+offset_bottom = 82.0
+texture_normal = ExtResource("2_2nc7s")
+texture_hover = ExtResource("2_nwcfo")
 
-[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[node name="main menu" type="TextureButton" parent="." unique_id=1691794895]
+offset_left = 104.0
+offset_top = 101.0
+offset_right = 237.0
+offset_bottom = 164.0
+texture_normal = ExtResource("4_d3xb4")
+texture_hover = ExtResource("5_2nc7s")
+
+[connection signal="pressed" from="resume" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="main menu" to="." method="_on_main_menu_pressed"]

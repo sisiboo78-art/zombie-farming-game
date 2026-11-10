@@ -80,7 +80,7 @@ _data = {
 &"idle_up": SubResource("Animation_mot72")
 }
 
-[node name="Node2D" type="Node2D" unique_id=2068417779]
+[node name="player" type="Node2D" unique_id=2068417779]
 
 [node name="player" type="CharacterBody2D" parent="." unique_id=1961071263]
 script = ExtResource("1_7bbpa")
